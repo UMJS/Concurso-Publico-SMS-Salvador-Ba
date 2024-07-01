@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+nav {
+    background-color: #333;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px; /* Aumentando a largura do conteúdo */
+    width: 100%;
+    margin: 20px 0; /* Adicionando margem superior e inferior */
+    background-color: #fff; /* Cor de fundo branca */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #4CAF50; /* Cor do título da seção */
+    margin-top: 0;
+}
+
+h4 {
+    color: #333; /* Cor do título do conteúdo programático */
+}
+
+ul {
+    list-style-type: disc; /* Estilo de lista */
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
