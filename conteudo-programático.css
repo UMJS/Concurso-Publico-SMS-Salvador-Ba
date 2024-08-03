@@ -1,0 +1,9 @@
+/* conteudo-programático.css */
+#conteudo ul li ul {
+    list-style-type: circle;
+    padding-left: 30px;
+  }
+  
+  #conteudo ul li ul li {
+    margin-bottom: 3px;
+  }

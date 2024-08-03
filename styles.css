@@ -7,11 +7,12 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; /* Cor verde do cabeçalho */
+    color: white; /* Cor do texto do cabeçalho */
     padding: 10px 0;
     width: 100%;
     text-align: center;
@@ -19,7 +20,7 @@ header {
 }
 
 nav {
-    background-color: #333;
+    background-color: #333; /* Cor cinza escura da navegação */
     width: 100%;
 }
 
@@ -29,30 +30,34 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens da lista quebrem para a próxima linha */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 5px; /* Margem para os itens da lista */
 }
 
 nav ul li a {
-    color: white;
+    color: white; /* Cor do texto da navegação */
     text-decoration: none;
-    padding: 14px 20px;
+    padding: 10px 15px; /* Padding ajustado para telas menores */
     display: block;
+    text-align: center; /* Centraliza o texto do link */
+    width: fit-content; /* Ajusta a largura do link ao conteúdo */
 }
 
 nav ul li a:hover {
-    background-color: #111;
+    background-color: #111; /* Cor do hover na navegação */
 }
 
 main {
     padding: 20px;
-    max-width: 800px; /* Aumentando a largura do conteúdo */
-    width: 100%;
-    margin: 20px 0; /* Adicionando margem superior e inferior */
+    max-width: 800px; /* Largura máxima do conteúdo */
+    width: 90%; /* Largura responsiva ajustada para telas menores */
+    margin: 20px 0; /* Margem superior e inferior */
     background-color: #fff; /* Cor de fundo branca */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px;
 }
 
 section {
@@ -60,12 +65,15 @@ section {
 }
 
 h3 {
-    color: #4CAF50; /* Cor do título da seção */
+    color: #4CAF50; /* Cor verde dos títulos das seções */
     margin-top: 0;
+    text-align: center; /* Centraliza os títulos das seções */
+    margin-bottom: 10px;
 }
 
 h4 {
-    color: #333; /* Cor do título do conteúdo programático */
+    color: #333; /* Cor cinza escura dos títulos dos conteúdos */
+    text-align: center; /* Centraliza os títulos dos conteúdos */
 }
 
 ul {
@@ -73,12 +81,102 @@ ul {
     padding-left: 20px;
 }
 
+li {
+    margin-bottom: 5px;
+}
+
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Cor cinza escura do rodapé */
+    color: white; /* Cor do texto do rodapé */
     padding: 10px 0;
     width: 100%;
     text-align: center;
     position: fixed;
     bottom: 0;
+}
+
+/* Responsividade - telas menores que 768px */
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 5px; /* Margem ajustada para telas menores */
+    }
+    h3, h4 {
+        font-size: 1.2em; /* Tamanho da fonte ajustado */
+    }
+}
+
+/* Responsividade - telas menores que 480px */
+@media (max-width: 480px) {
+    main {
+        width: 95%; /* Largura ajustada para telas muito pequenas */
+    }
+    h3, h4 {
+        font-size: 1em; /* Tamanho da fonte ajustado */
+    }
+}
+
+/* Estilos para o Conteúdo Programático */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: 200px;
+}
+
+#search-button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #3e8e41;
+}
+
+/* Estilos para o layout de Perguntas e Respostas */
+#perguntas-respostas {
+    margin-top: 30px;
+}
+
+.pergunta-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#pergunta {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical; /* Permite redimensionar a altura do textarea */
+}
+
+#enviar-pergunta {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#enviar-pergunta:hover {
+    background-color: #3e8e41;
+}
+
+#respostas {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
 }
